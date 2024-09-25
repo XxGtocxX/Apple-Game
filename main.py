@@ -24,17 +24,17 @@ score = 0
 TILESIZE = 32
 
 # Floor
-floor_img = pygame.image.load("C:/Users/Debanuj/Documents/CPP/Projects/Apple Game/assets/floor.png").convert_alpha()
+floor_img = pygame.image.load("./assets/floor.png").convert_alpha()
 floor_img = pygame.transform.scale(floor_img, (TILESIZE * 15, TILESIZE * 5))
 floor_rect = floor_img.get_rect(bottomleft = (0, screen.get_height()))
 
 # Player 
-player_img = pygame.image.load("C:/Users/Debanuj/Documents/CPP/Projects/Apple Game/assets/player_static.png").convert_alpha() # convert_alpha optimised the imgs in pygame
+player_img = pygame.image.load("./assets/player_static.png").convert_alpha() # convert_alpha optimised the imgs in pygame
 player_img = pygame.transform.scale(player_img, (TILESIZE, TILESIZE * 2 + 1))
 player_rect = player_img.get_rect(center = (screen.get_width() / 2, screen.get_height() - floor_img.get_height() - (player_img.get_height() / 2)))
 
 # Apple 
-apple_img = pygame.image.load("C:/Users/Debanuj/Documents/CPP/Projects/Apple Game/assets/apple.png").convert_alpha()
+apple_img = pygame.image.load("./assets/apple.png").convert_alpha()
 apple_img = pygame.transform.scale(apple_img, (TILESIZE, TILESIZE))
 
 apples = [
@@ -44,10 +44,10 @@ apples = [
 ]
 
 # Fonts 
-font = pygame.font.Font("C:/Users/Debanuj/Documents/CPP/Projects/Apple Game/assets/PixeloidMono.ttf", TILESIZE // 2)
+font = pygame.font.Font("./assets/PixeloidMono.ttf", TILESIZE // 2)
 
 # Sound effects
-pickup = pygame.mixer.Sound('C:/Users/Debanuj/Documents/CPP/Projects/Apple Game/assets/powerup.mp3')
+pickup = pygame.mixer.Sound('./assets/powerup.mp3')
 pickup.set_volume(0.1)
 
 running = True
